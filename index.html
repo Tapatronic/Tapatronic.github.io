@@ -19,6 +19,14 @@
     .product {
       text-align: center;
     }
+    @keyframes logo-animation {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .amazon-logo img {
+      animation: logo-animation 2s infinite;
+    }
   </style>
   <title>TapaTronic</title>
 </head>
