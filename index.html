@@ -26,18 +26,15 @@
     }
     .amazon-logo img {
       animation: logo-animation 2s infinite;
-      .amazon-logo {
-  position: relative;
-}
-
-.amazon-logo::after {
+    body::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 400px; /* Ajusta esto al alto de tu logo */
   width: 100%;
   background-color: white;
+  z-index: -1;
 }
 
     }
