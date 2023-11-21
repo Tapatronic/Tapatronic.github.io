@@ -13,19 +13,25 @@
       align-items: center;
       height: 100vh;
       background-color: #333;
+      color: #f4f4f4;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 80%;
     }
     .product-detail {
       box-shadow: 0 0 10px rgba(255,255,255,0.1);
       padding: 20px;
       background-color: #222;
-      color: #f4f4f4;
+      width: 60%;
     }
     .product-detail img {
       width: 100%;
     }
     .product-detail h1 {
       text-align: center;
-      color: #f4f4f4;
     }
     .product-detail p {
       color: #ccc;
@@ -43,15 +49,34 @@
       border: none;
       margin-top: 20px;
     }
+    .creator-info {
+      width: 30%;
+      padding: 20px;
+      background-color: #222;
+      color: #f4f4f4;
+    }
+    .creator-info h2 {
+      text-align: center;
+    }
+    .creator-info p {
+      color: #ccc;
+    }
   </style>
 </head>
 <body>
-  <div class="product-detail">
-    <img src="ruta/a/tu/imagen.jpg" alt="Auto Logger">
-    <h1>Auto Logger</h1>
-    <p>Lo importante es el tiempo, y lo sabes asi que no lo pierdas en tonterias.</p>
-    <p class="price">$0.50</p>
-    <button>Añadir al carrito</button>
+  <div class="container">
+    <div class="product-detail">
+      <img src="ruta/a/tu/imagen.jpg" alt="Auto Logger">
+      <h1>Auto Logger</h1>
+      <p>Lo importante es el tiempo, y lo sabes asi que no lo pierdas en tonterias.</p>
+      <p class="price">$0.50</p>
+      <button>Añadir al carrito</button>
+    </div>
+    <div class="creator-info">
+      <h2>Creador</h2>
+      <p>Nombre del creador</p>
+      <p>Información adicional del creador</p>
+    </div>
   </div>
 </body>
 </html>
