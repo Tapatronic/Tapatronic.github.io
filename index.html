@@ -26,6 +26,20 @@
     }
     .amazon-logo img {
       animation: logo-animation 2s infinite;
+      .amazon-logo {
+  position: relative;
+}
+
+.amazon-logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
     }
   </style>
   <title>TapaTronic</title>
