@@ -10,7 +10,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start; /* Cambiado de space-between a flex-start para mover todo el contenido hacia arriba */
       padding: 20px;
       height: 100vh;
     }
@@ -39,6 +39,7 @@
       flex-wrap: wrap; /* Añadido para permitir que los productos se envuelvan a la siguiente línea si no hay suficiente espacio */
       gap: 150px; /* Añadido para crear un espacio entre los productos */
       width: 100%;
+      margin-top: 20px; /* Añadido para crear un espacio entre la barra de búsqueda y los productos */
     }
     .product {
       width: 30%; /* Cambiado de 100% a 30% para que cada producto ocupe aproximadamente un tercio del ancho de la página */
