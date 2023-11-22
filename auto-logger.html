@@ -17,24 +17,34 @@
     }
     .container {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
       width: 80%;
-      height: 80vh; /* Asegura que el contenedor ocupe la mayor parte de la pantalla */
+      height: 80vh;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+      background-color: #222;
+    }
+    .header img {
+      width: 50px;
+      height: 50px;
+    }
+    .header button {
+      background-color: #5C9210;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
     }
     .product-detail {
       box-shadow: 0 0 10px rgba(255,255,255,0.1);
       padding: 20px;
       background-color: #222;
-      width: 60%;
-      display: flex;
-      flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-      justify-content: space-between; /* Distribuye el espacio de manera uniforme entre los elementos */
-    }
-    .product-detail img {
-      width: 50%;
-      height: auto;
-      object-fit: cover;
+      width: 100%;
     }
     .product-detail h1 {
       text-align: center;
@@ -56,14 +66,9 @@
       margin-top: 20px;
     }
     .creator-info {
-      height: 100%; /* Asegura que la columna de la derecha llegue hasta abajo */
-      width: 30%;
       padding: 20px;
       background-color: #222;
       color: #f4f4f4;
-      display: flex;
-      flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-      justify-content: space-between; /* Distribuye el espacio de manera uniforme entre los elementos */
     }
     .creator-info h2 {
       text-align: center;
@@ -75,17 +80,18 @@
 </head>
 <body>
   <div class="container">
+    <div class="header">
+      <img src="LOGUITO ALT.jpeg" alt="Auto Logger">
+      <button><a href='https://www.paginaprincipal.com'>Volver</a></button>
+    </div>
     <div class="product-detail">
-      <img src="LOGUITO ALT.jpeg" width='300' height='300' alt="Auto Logger">
       <h1>Auto Logger</h1>
       <p>Lo importante es el tiempo, y lo sabes asi que no lo pierdas en tonterias.</p>
       <p class="price">$0.50</p>
       <button><a href='https://www.mediafire.com/file/69nv6f6p21okg7t/Tapatronic_Autologger.zip/file'>Descargar</a></button>
     </div>
     <div class="creator-info">
-      <h2>Creador</h2>
-      <p>Nombre del creador</p>
-      <p>Información adicional del creador</p>
+      <h2>Información adicional del creador</h2>
     </div>
   </div>
 </body>
