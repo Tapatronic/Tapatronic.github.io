@@ -10,7 +10,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between; /* Cambiado para que el contenido esté distribuido de manera uniforme */
+      justify-content: space-between;
       padding: 20px;
       height: 100vh;
     }
@@ -19,8 +19,8 @@
       margin-bottom: 20px;
     }
     .amazon-logo img {
-      width: 200px; /* Cambiado para hacer el logo más pequeño */
-      height: 200px; /* Cambiado para hacer el logo más pequeño */
+      width: 200px;
+      height: 200px;
       animation: logo-animation 2s infinite;
     }
     nav ul {
@@ -33,12 +33,13 @@
       margin-top: 20px;
     }
     .products {
-      display: flex;
-      justify-content: space-around;
+      display: grid; /* Cambiado de flex a grid */
+      grid-template-columns: repeat(4, 1fr); /* Añadido para crear una cuadrícula de 4 columnas */
+      gap: 20px; /* Añadido para crear un espacio entre los elementos de la cuadrícula */
       width: 100%;
     }
     .product {
-      width: 30%;
+      width: 100%; /* Cambiado de 30% a 100% para que cada producto ocupe todo el espacio de su celda en la cuadrícula */
     }
     table {
       width: 100%;
@@ -51,9 +52,9 @@
     }
     footer {
       text-align: center;
-      position: absolute; /* Añadido para mover el pie de página al final de la página */
-      bottom: 0; /* Añadido para mover el pie de página al final de la página */
-      width: 100%; /* Añadido para mover el pie de página al final de la página */
+      position: absolute;
+      bottom: 0;
+      width: 100%;
     }
     @keyframes logo-animation {
       0% { transform: scale(1); }
@@ -83,23 +84,17 @@
   </header>
 
   <section class="products">
-    <table>
-      <tr>
-        <th>Producto</th>
-        <th>Descripción</th>
-        <th>Precio</th>
-      </tr>
-      <tr>
-        <td><a href="https://tapatronic.github.io/auto-logger.html">Auto Logger</a></td>
-        <td>Lo importante es el tiempo, y lo sabes asi que no lo pierdas en tonterias</td>
-        <td>0,50€</td>
-      </tr>
-      <tr>
-        <td><a href="https://tapatronic.github.io/class-tools.html">TapaTronic Class Tools</a></td>
-        <td>Todas tus herramientas, en un entorno gráfico (Personalizable.)</td>
-        <td>0,50€</td>
-      </tr>
-    </table>
+    <!-- Cambiado de tabla a divs para cada producto -->
+    <div class="product">
+      <a href="https://tapatronic.github.io/auto-logger.html">Auto Logger</a>
+      <p>Lo importante es el tiempo, y lo sabes asi que no lo pierdas en tonterias</p>
+      <p>0,50€</p>
+    </div>
+    <div class="product">
+      <a href="https://tapatronic.github.io/class-tools.html">TapaTronic Class Tools</a>
+      <p>Todas tus herramientas, en un entorno gráfico (Personalizable.)</p>
+      <p>0,50€</p>
+    </div>
   </section>
 
   <footer>
