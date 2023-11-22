@@ -33,13 +33,16 @@
       margin-top: 20px;
     }
     .products {
-      display: grid; /* Cambiado de flex a grid */
-      grid-template-columns: repeat(4, 1fr); /* Añadido para crear una cuadrícula de 4 columnas */
-      gap: 20px; /* Añadido para crear un espacio entre los elementos de la cuadrícula */
+      display: flex; /* Cambiado de grid a flex */
+      flex-direction: row; /* Añadido para organizar los productos en una fila */
+      justify-content: center; /* Añadido para centrar los productos */
+      flex-wrap: wrap; /* Añadido para permitir que los productos se envuelvan a la siguiente línea si no hay suficiente espacio */
+      gap: 20px; /* Añadido para crear un espacio entre los productos */
       width: 100%;
     }
     .product {
-      width: 100%; /* Cambiado de 30% a 100% para que cada producto ocupe todo el espacio de su celda en la cuadrícula */
+      width: 30%; /* Cambiado de 100% a 30% para que cada producto ocupe aproximadamente un tercio del ancho de la página */
+      text-align: center; /* Añadido para centrar el texto dentro de cada producto */
     }
     table {
       width: 100%;
