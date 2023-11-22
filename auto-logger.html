@@ -20,19 +20,21 @@
       flex-direction: row;
       justify-content: space-between;
       width: 80%;
+      height: 80vh; /* Asegura que el contenedor ocupe la mayor parte de la pantalla */
     }
     .product-detail {
       box-shadow: 0 0 10px rgba(255,255,255,0.1);
       padding: 20px;
       background-color: #222;
       width: 60%;
+      display: flex;
+      flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+      justify-content: space-between; /* Distribuye el espacio de manera uniforme entre los elementos */
     }
     .product-detail img {
       width: 50%;
       height: auto;
       object-fit: cover;
-    }
-
     }
     .product-detail h1 {
       text-align: center;
@@ -54,11 +56,14 @@
       margin-top: 20px;
     }
     .creator-info {
-      height: 80%;
+      height: 100%; /* Asegura que la columna de la derecha llegue hasta abajo */
       width: 30%;
       padding: 20px;
       background-color: #222;
       color: #f4f4f4;
+      display: flex;
+      flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+      justify-content: space-between; /* Distribuye el espacio de manera uniforme entre los elementos */
     }
     .creator-info h2 {
       text-align: center;
