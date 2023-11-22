@@ -28,7 +28,7 @@
       align-items: center;
       width: 100%;
       padding: 20px;
-      background-color: #222;
+      background-color: #333; /* Cambiado para que coincida con el fondo */
     }
     .header img {
       width: 50px;
@@ -40,14 +40,21 @@
       border: none;
       padding: 10px 20px;
     }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 20px;
+      background-color: #333; /* Cambiado para que coincida con el fondo */
+    }
     .product-detail {
       box-shadow: 0 0 10px rgba(255,255,255,0.1);
       padding: 20px;
-      background-color: #222;
-      width: 100%;
+      background-color: #333; /* Cambiado para que coincida con el fondo */
+      width: 60%;
     }
     .product-detail h1 {
-      text-align: center;
+      text-align: left; /* Cambiado para que esté alineado a la izquierda */
     }
     .product-detail p {
       color: #ccc;
@@ -67,8 +74,9 @@
     }
     .creator-info {
       padding: 20px;
-      background-color: #222;
+      background-color: #333; /* Cambiado para que coincida con el fondo */
       color: #f4f4f4;
+      width: 30%;
     }
     .creator-info h2 {
       text-align: center;
@@ -82,17 +90,18 @@
   <div class="container">
     <div class="header">
       <img src="LOGUITO ALT.jpeg" alt="Auto Logger">
-      <button><a href='https://www.Tapatronic.github.io
-'>Volver</a></button>
+      <button><a href='https://www.paginaprincipal.com'>Volver</a></button>
     </div>
-    <div class="product-detail">
-      <h1>Auto Logger</h1>
-      <p>Lo importante es el tiempo, y lo sabes asi que no lo pierdas en tonterias.</p>
-      <p class="price">$0.50</p>
-      <button><a href='https://www.mediafire.com/file/69nv6f6p21okg7t/Tapatronic_Autologger.zip/file'>Descargar</a></button>
-    </div>
-    <div class="creator-info">
-      <h2>Información adicional del creador</h2>
+    <div class="content">
+      <div class="product-detail">
+        <h1>Auto Logger</h1>
+        <p>Lo importante es el tiempo, y lo sabes asi que no lo pierdas en tonterias.</p>
+        <p class="price">$0.50</p>
+        <button><a href='https://www.mediafire.com/file/69nv6f6p21okg7t/Tapatronic_Autologger.zip/file'>Descargar</a></button>
+      </div>
+      <div class="creator-info">
+        <h2>Información adicional del creador</h2>
+      </div>
     </div>
   </div>
 </body>
