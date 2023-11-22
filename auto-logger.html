@@ -18,7 +18,7 @@
     .container {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start; /* Cambiado para que el contenido esté en la parte superior */
       width: 80%;
       height: 80vh;
     }
@@ -29,6 +29,7 @@
       width: 100%;
       padding: 20px;
       background-color: #000; /* Cambiado a negro */
+      border-bottom: 1px solid #fff; /* Añadido para crear una línea blanca debajo del encabezado */
     }
     .header img {
       width: 50px;
@@ -77,6 +78,7 @@
       background-color: #000; /* Cambiado a negro */
       color: #f4f4f4;
       width: 30%;
+      margin-top: -20px; /* Añadido para mover la información del creador hacia arriba */
     }
     .creator-info h2 {
       text-align: center;
