@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="es"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="es">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
@@ -11,12 +11,36 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 20px; /* Añadido para dar más espacio alrededor del contenido */
     }
-    h1 {
-      font-size: 3em;
+    header {
       text-align: center;
+      margin-bottom: 20px; /* Añadido para dar más espacio debajo del encabezado */
+    }
+    .amazon-logo img {
+      width: 400px;
+      height: 400px;
+      animation: logo-animation 2s infinite;
+    }
+    nav ul {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+      padding: 0;
+    }
+    .search-bar {
+      margin-top: 20px; /* Añadido para dar más espacio encima de la barra de búsqueda */
+    }
+    .products {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
     }
     .product {
+      width: 30%; /* Añadido para dar más espacio alrededor de los productos */
+    }
+    footer {
+      margin-top: 20px; /* Añadido para dar más espacio encima del pie de página */
       text-align: center;
     }
     @keyframes logo-animation {
@@ -24,19 +48,15 @@
       50% { transform: scale(1.1); }
       100% { transform: scale(1); }
     }
-    .amazon-logo img {
-      animation: logo-animation 2s infinite;
-    }
   </style>
   <title>TapaTronic</title>
 </head>
 <body>
   <header>
-    <h1>TapaTronic</h1>
     <div class="amazon-logo">
-      <img src="LOGUITO MUY GUAPO.jpeg" width='400' height='400' alt="Tapatronic Logo">
+      <img src="LOGUITO MUY GUAPO.jpeg" alt="Tapatronic Logo">
     </div>
-    <nav position='left'>
+    <nav>
       <ul>
         <li><a href="#">Inicio</a></li>
         <li><a href="#">Categorías</a></li>
@@ -69,6 +89,5 @@
   <footer>
     <p>© 2023 TapaTronic. Todos los derechos reservados.</p>
   </footer>
-
-
-</body></html>
+</body>
+</html>
