@@ -4,21 +4,49 @@
   <meta charset="UTF-8">
   <title>Sobre nosotros</title>
   <style>
-    /* ... tus estilos actuales ... */
     body {
-      background-color: black;
-      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* Cambiado para que el contenido esté en la parte superior */
+      height: 100vh;
+      background-color: #000; /* Cambiado a negro */
+      color: #f4f4f4;
+    }
+    .container {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: flex-start; /* Cambiado de space-between a flex-start para mover todo el contenido hacia arriba */
-      padding: 0px;
-      height: 100vh;
+      justify-content: flex-start; /* Cambiado para que el contenido esté en la parte superior */
+      width: 80%;
+      height: 80vh;
+    }
     .header {
-      justify-content: flex-end; /* Cambiado para mover el botón a la derecha */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+      background-color: #000; /* Cambiado a negro */
+      border-bottom: 1px solid #fff; /* Añadido para crear una línea blanca debajo del encabezado */
+    }
+    .header img {
+      width: 50px;
+      height: 50px;
+    }
+    .header button {
+      background-color: #5C9210;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
     }
     .content {
-      justify-content: flex-end; /* Cambiado para mover el texto a la derecha */
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 20px;
+      background-color: #000; /* Cambiado a negro */
     }
     .about-us {
       text-align: justify; /* Añadido para justificar el texto */
