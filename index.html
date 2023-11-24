@@ -128,7 +128,23 @@
   </section>
 
   <footer>
+    <p id="horaConexion"></p>
+    <p id="tiempoConexion"></p>
     <p>© 2023 TapaTronic. Todos los derechos reservados.</p>
   </footer>
+      <script>
+        // Guarda la hora a la que el usuario se conectó
+        var horaConexion = new Date();
+
+        // Muestra la hora de conexión en el footer
+        document.getElementById('horaConexion').textContent = 'Hora de conexión: ' + horaConexion.toLocaleTimeString();
+
+        // Actualiza el tiempo de conexión cada segundo
+        setInterval(function() {
+            var ahora = new Date();
+            var tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
+            document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
+        }, 1000);
+    </script>
 </body>
 </html>
