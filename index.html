@@ -77,6 +77,8 @@
       text-align: center;
     }
     footer {
+      display: flex;
+      justify-content: space-between;
       text-align: center;
       position: absolute;
       bottom: 0;
@@ -85,6 +87,9 @@
       background-color: #000;
       color: #fff;
     }
+     #horaConexion, #tiempoConexion {
+       text-decoration: underline;
+        }
     @keyframes logo-animation {
       0% { transform: scale(1); }
       50% { transform: scale(1.1); }
@@ -129,8 +134,8 @@
 
   <footer>
     <p id="horaConexion"></p>
-    <p id="tiempoConexion"></p>
     <p>© 2023 TapaTronic. Todos los derechos reservados.</p>
+    <p id="tiempoConexion"></p>
   </footer>
       <script>
         // Guarda la hora a la que el usuario se conectó
