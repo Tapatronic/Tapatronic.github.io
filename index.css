@@ -55,11 +55,11 @@
       box-sizing: border-box;
     }
     a {
-      color: #0769cb; /* Cambia el color del texto del enlace a rojo */
-      text-decoration: none; /* Elimina la subrayado del enlace */
+      color: #0769cb; 
+      text-decoration: none; 
     }
     a:hover {
-      color: #00ff00; /* Cambia el color del texto del enlace a verde cuando el ratón pasa por encima */
+      color: #00ff00; 
       cursor: url('cursor02.cur'), auto;
     }
     table {
