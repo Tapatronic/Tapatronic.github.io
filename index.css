@@ -1,1 +1,100 @@
-
+  <style>
+    body {
+      cursor: url('cursor01.cur'), auto;
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0px;
+      height: 100vh;
+      margin: 0;
+      position: relative;
+    }
+    header {
+      width: 100%;
+      text-align: center;
+      align-content: center;
+      background-color: #f8f3e8;
+      margin-bottom: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    .amazon-logo img {
+      width: 200px;
+      height: 200px;
+      animation: logo-animation 2s infinite;
+    }
+    nav ul {
+      display: flex;
+      text-align: center;
+      justify-content: space-around;
+      list-style-type: none;
+    }
+    .search-bar {
+      margin-top: 20px;
+      border-bottom: none;
+      margin-bottom: 10px;
+    }
+    .products {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 100px;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .product {
+      width: 40%;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+      background-color: #2f2b29;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    a {
+      color: #0769cb; /* Cambia el color del texto del enlace a rojo */
+      text-decoration: none; /* Elimina la subrayado del enlace */
+    }
+    a:hover {
+      color: #00ff00; /* Cambia el color del texto del enlace a verde cuando el ratón pasa por encima */
+      cursor: url('cursor02.cur'), auto;
+    }
+    table {
+      width: 50%;
+    }
+    table, th, td {
+      border: 1px solid white;
+      border-collapse: collapse;
+      padding: 10px;
+      text-align: center;
+    }
+    section {
+      margin-bottom: 300px;
+    }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      padding: 10px 0;
+      background-color: #000;
+      color: #fff;
+    }
+     #horaConexion, #tiempoConexion {
+       margin-left: 20px;
+       margin-right: 20px;
+       text-decoration: underline;
+        }
+    @keyframes logo-animation {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
