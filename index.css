@@ -33,6 +33,10 @@
       list-style-type: none;
     }
     .search-bar {
+      font-color: gray;
+      font-family: Monospace;
+      border-size: 2px;
+      border-color: black;    
       margin-top: 20px;
       border-bottom: none;
       margin-bottom: 10px;
