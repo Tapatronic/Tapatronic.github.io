@@ -23,16 +23,18 @@
     </nav>
     <div class="search-bar"> 
       <input type="text" placeholder="Buscar productos...">
-      <button>Buscar</button>
+      <button onclick="buscarProducto()">Buscar</button>
     </div> 
   </header>
 
   <section class="products">
     <div class="product">
+        <div class="product-title">
         <a href="https://tapatronic.github.io/auto-logger.html"><h1>Auto Logger</h1></a>
         <p>Lo importante es el tiempo, y lo sabes asi que no lo pierdas en tonterias</p>
-      <p>0,50€</p>
-    </div>
+        <p>0,50€</p>
+        </div>
+      </div>
     <div class="product">
       <div class="product-title">
         <a href="https://tapatronic.github.io/class-tools.html"><h1>TapaTronic Class Tools</h1></a>
@@ -68,6 +70,28 @@
             var tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
             document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
         }, 1000);
+
+        function buscarProducto() {
+  // Obtén el valor del input de búsqueda
+  var input = document.querySelector('.search-bar input');
+  var filter = input.value.toUpperCase();
+
+  // Obtén todos los productos
+  var products = document.querySelectorAll('.product');
+
+  // Recorre todos los productos y oculta aquellos que no coinciden con la búsqueda
+  for (var i = 0; i < products.length; i++) {
+    var titleElement = products[i].querySelector('.product-title a');
+    if (titleElement) {
+      var title = titleElement.textContent;
+      if (title.toUpperCase().indexOf(filter) > -1) {
+        products[i].style.display = "";
+      } else {
+        products[i].style.display = "none";
+      }
+    }
+  }
+}        
     </script>
 </body>
 </html>
