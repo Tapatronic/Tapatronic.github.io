@@ -1,3 +1,6 @@
+Por supuesto, aquí está tu código con la barra de búsqueda modificada para que se ejecute al presionar Enter:
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <link href="index.css" rel="stylesheet">
@@ -21,9 +24,11 @@
           <li><a href="https://ma5yt02m8p6.typeform.com/to/TLjB2fz2" target="_blank" >Contacto</a></li>
       </ul>
     </nav>
-    <div class="search-bar"> 
-      <input type="text" placeholder="Buscar productos...">
-      <button onclick="buscarProducto()">Buscar</button>
+    <div class="search-bar">
+      <form onsubmit="event.preventDefault(); buscarProducto();">
+        <input type="text" placeholder="Buscar productos...">
+        <button type="submit">Buscar</button>
+      </form>
     </div> 
   </header>
 
@@ -91,7 +96,7 @@
       }
     }
   }
-}        
+}                  
     </script>
 </body>
 </html>
