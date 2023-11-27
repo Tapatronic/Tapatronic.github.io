@@ -29,6 +29,11 @@
         font-size: 17px;
         color: #0769cb;
     }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .botones:hover{
         background: #c2bfb8;
         color: #16261a;
