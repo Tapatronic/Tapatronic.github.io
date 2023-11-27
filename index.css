@@ -24,6 +24,10 @@
     .botones {
         background: none;
         border: none;
+        width: 300px;
+        height:30px;
+        font-size: 17px;
+        color: #0769c
     }
     .amazon-logo img {
       width: 200px;
@@ -56,7 +60,7 @@
         border-color: black;
     }
     .search-bar {
-      margin-top: 20px;
+      margin-top: 0px;
       border-bottom: none;
       margin-bottom: 10px;
     }
