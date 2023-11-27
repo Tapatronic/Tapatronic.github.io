@@ -36,16 +36,15 @@
         color: green;
         border-color: black;
         border-style: solid;
-        border-size: 3px;
+        border-width: 3px;
     }
 
     .search-button{
-        float: right;
         background-color: gray;
         font-family: Monospace;
         color: white;
         border-style: solid;
-        border-size: 3px;
+        border-width: 3px;
         border-color: black;
     }
     .search-bar {
