@@ -34,15 +34,15 @@
     }
     .search-place{
         color: green;
-        border-color: gray;
+        border-color: black;
     }
 
     .search-button{
-        background-color: black;
+        background-color: gray;
         font-family: Monospace;
         color: white;
         border-size: 2px;
-        border-color: gray;
+        border-color: black;
     }
     .search-bar {
       margin-top: 20px;
