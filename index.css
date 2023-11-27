@@ -48,7 +48,7 @@
     nav ul {
       display: flex;
       text-align: center;
-      justify-content: space-around;
+      justify-content: center;
       list-style-type: none;
     }
     .search-place{
