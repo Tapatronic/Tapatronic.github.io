@@ -27,7 +27,12 @@
         width: 300px;
         height:30px;
         font-size: 17px;
-        color: #0769c;
+        color: #0769cb;
+    }
+    .botones:hover{
+        background: #c2bfb8:
+        color: #00ff00;
+        text-decoration: underline;
     }
     .amazon-logo img {
       width: 200px;
