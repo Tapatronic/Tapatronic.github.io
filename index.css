@@ -27,7 +27,7 @@
         width: 300px;
         height:30px;
         font-size: 17px;
-        color: #0769c
+        color: #0769c;
     }
     .amazon-logo img {
       width: 200px;
@@ -41,7 +41,7 @@
       list-style-type: none;
     }
     .search-place{
-        color: green;
+        color: #0769c;
         border-color: black;
         border-style: solid;
         border-width: 3px;
