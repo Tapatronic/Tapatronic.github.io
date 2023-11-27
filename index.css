@@ -32,11 +32,18 @@
       justify-content: space-around;
       list-style-type: none;
     }
+    .search-place{
+        color: green;        
+    }
+
+    .search-button{
+        background-color: black;
+        font-family: Monospace;
+        font-color: white;
+        border-size: 2px;
+        border-color: gray;
+    }
     .search-bar {
-      font-color: gray;
-      font-family: Monospace;
-      border-size: 2px;
-      border-color: black;    
       margin-top: 20px;
       border-bottom: none;
       margin-bottom: 10px;
