@@ -21,8 +21,9 @@
       top: 0;
       z-index: 1;
     }
-    button {
+    .botones {
         background: none;
+        border: none;
     }
     .amazon-logo img {
       width: 200px;
