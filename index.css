@@ -40,7 +40,7 @@
     .search-button{
         background-color: black;
         font-family: Monospace;
-        font-color: white;
+        color: white;
         border-size: 2px;
         border-color: gray;
     }
@@ -49,6 +49,12 @@
       border-bottom: none;
       margin-bottom: 10px;
     }
+    .search-place, .search-button {
+      margin: 0; /* quita el margen entre los elementos */
+      display: inline-block; /* hace que los elementos se muestren en línea */
+      vertical-align: middle; /* alinea los elementos verticalmente */
+    }
+
     .products {
       display: flex;
       flex-direction: row;
