@@ -38,7 +38,11 @@
         border-style: solid;
         border-width: 3px;
     }
-
+    #gratis{
+        color: green;
+        font-weight: bold;
+        text-size: 26px;
+    }
     .search-button{
         background-color: gray;
         font-family: Monospace;
