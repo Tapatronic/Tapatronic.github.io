@@ -33,6 +33,7 @@
         background: #c2bfb8;
         color: #00ff00;
         text-decoration: underline;
+        cursor: url('cursor02.cur'), auto;
     }
     .amazon-logo img {
       width: 200px;
