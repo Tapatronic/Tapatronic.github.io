@@ -45,16 +45,12 @@
         border-color: black;
     }
     .search-bar {
+      padding: 0px;
       margin-top: 20px;
       border-bottom: none;
       margin-bottom: 10px;
+      display: inline-block;
     }
-    .search-place, .search-button {
-      margin: 0; /* quita el margen entre los elementos */
-      display: inline-block; /* hace que los elementos se muestren en línea */
-      vertical-align: middle; /* alinea los elementos verticalmente */
-    }
-
     .products {
       display: flex;
       flex-direction: row;
