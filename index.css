@@ -45,11 +45,9 @@
         border-color: black;
     }
     .search-bar {
-      padding: 0px;
       margin-top: 20px;
       border-bottom: none;
       margin-bottom: 10px;
-      display: inline-block;
     }
     .products {
       display: flex;
