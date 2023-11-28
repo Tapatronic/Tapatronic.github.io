@@ -1,6 +1,6 @@
 document.body.addEventListener('click', function(event) {
     var bananaImg = document.createElement('img');
-    bananaImg.src = 'ruta/a/tu/imagen/de/platano.png'; // Cambia esto a la ruta de tu imagen de plátano
+    bananaImg.src = 'banana.png';
     bananaImg.style.left = event.clientX + 'px';
     bananaImg.style.top = event.clientY + 'px';
     bananaImg.classList.add('banana');
