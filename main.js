@@ -1,24 +1,28 @@
-// Guarda la hora a la que el usuario se conectó
-let horaConexion = new Date();
-// Muestra la hora de conexión en el footer
-document.getElementById('horaConexion').textContent = 'Hora de conexión: ' + horaConexion.toLocaleTimeString();
-// Actualiza el tiempo de conexión cada segundo
-setInterval(() => {
-    let ahora = new Date();
-    let tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
-    document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
-}, 1000);
+ var horaConexion = new Date();
 
-let input = document.querySelector('.search-bar input');
-let products = document.querySelectorAll('.product');
+        // Muestra la hora de conexión en el footer
+        document.getElementById('horaConexion').textContent = 'Hora de conexión: ' + horaConexion.toLocaleTimeString();
 
-function buscarProducto() {
-  let filter = input.value.toUpperCase();
+        // Actualiza el tiempo de conexión cada segundo
+        setInterval(function() {
+            var ahora = new Date();
+            var tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
+            document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
+        }, 1000);
+
+        function buscarProducto() {
+  // Obtén el valor del input de búsqueda
+  var input = document.querySelector('.search-bar input');
+  var filter = input.value.toUpperCase();
+
+  // Obtén todos los productos
+  var products = document.querySelectorAll('.product');
+
   // Recorre todos los productos y oculta aquellos que no coinciden con la búsqueda
-  for (let i = 0; i < products.length; i++) {
-    let titleElement = products[i].querySelector('.product-title a');
+  for (var i = 0; i < products.length; i++) {
+    var titleElement = products[i].querySelector('.product-title a');
     if (titleElement) {
-      let title = titleElement.textContent;
+      var title = titleElement.textContent;
       if (title.toUpperCase().indexOf(filter) > -1) {
         products[i].style.display = "";
       } else {
@@ -27,8 +31,3 @@ function buscarProducto() {
     }
   }
 }
-
-document.querySelector('.search-bar form').addEventListener('submit', (event) => {
-  event.preventDefault();
-  buscarProducto();
-});
