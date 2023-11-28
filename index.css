@@ -60,7 +60,7 @@
     .banana {
     position: absolute;
     width: 50px;
-    transition: transform 10s;
+    transition: transform 1s;
     }
     #gratis{
         color: green;
