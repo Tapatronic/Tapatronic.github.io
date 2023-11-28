@@ -7,7 +7,7 @@ document.body.addEventListener('click', function(event) {
     document.body.appendChild(bananaImg);
     bananaImg.style.transition = 'transform 10s';
     setTimeout(function() {
-        bananaImg.style.transform = 'translateY(' + window.innerHeight + 'px) rotate(360deg)';
+        bananaImg.style.transform = 'rotate(360deg) translateY(' + window.innerHeight + 'px)';
     }, 0);
     bananaImg.addEventListener('transitionend', function() {
         document.body.removeChild(bananaImg);
