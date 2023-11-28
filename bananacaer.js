@@ -27,4 +27,4 @@ window.onload = function() {
         var ahora = new Date();
         var tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
         document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
-    }, 1000);
+    }, 1000);}
