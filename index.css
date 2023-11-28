@@ -57,6 +57,11 @@
         border-style: solid;
         border-width: 3px;
     }
+    .banana {
+    position: absolute;
+    width: 50px;
+    transition: transform 2s;
+    }
     #gratis{
         color: green;
         font-weight: bold;
