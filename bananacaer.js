@@ -6,12 +6,9 @@ document.body.addEventListener('click', function(event) {
     bananaImg.classList.add('banana');
     document.body.appendChild(bananaImg);
     bananaImg.style.transition = 'transform 10s';
-    // Esto hace que el plátano caiga
     setTimeout(function() {
-        bananaImg.style.transform = 'translateY(' + window.innerHeight + 'px)';
+        bananaImg.style.transform = 'translateY(' + window.innerHeight + 'px) rotate(360deg)';
     }, 0);
-
-    // Esto elimina el plátano de la página una vez que ha caído
     bananaImg.addEventListener('transitionend', function() {
         document.body.removeChild(bananaImg);
     });
