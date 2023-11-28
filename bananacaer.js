@@ -5,7 +5,7 @@ document.body.addEventListener('click', function(event) {
     bananaImg.style.top = event.clientY + 'px';
     bananaImg.classList.add('banana');
     document.body.appendChild(bananaImg);
-    bananaImg.style.transition = 'transform 2s';
+    bananaImg.style.transition = 'transform 10s';
     // Esto hace que el plátano caiga
     setTimeout(function() {
         bananaImg.style.transform = 'translateY(' + window.innerHeight + 'px)';
