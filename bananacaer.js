@@ -1,6 +1,6 @@
 document.body.addEventListener('click', function(event) {
     var bananaImg = document.createElement('img');
-    bananaImg.src = 'banana.png';
+    bananaImg.src = 'bananapixelart.png';
     bananaImg.style.left = event.clientX + 'px';
     bananaImg.style.top = event.clientY + 'px';
     bananaImg.classList.add('banana');
