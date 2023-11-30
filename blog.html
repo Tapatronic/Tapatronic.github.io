@@ -192,6 +192,7 @@
   </footer>
       <script>
 // Comprueba si ya hay una hora de conexión guardada
+// Comprueba si ya hay una hora de conexión guardada
 var horaConexion = localStorage.getItem('horaConexion');
 if (!horaConexion) {
     // Si no la hay, guarda la hora actual
@@ -211,11 +212,6 @@ setInterval(function() {
     var tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
     document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
 }, 1000);
-
-// Elimina la hora de conexión cuando el usuario está a punto de salir de la página
-window.onbeforeunload = function() {
-    localStorage.removeItem('horaConexion');
-};
 
        // Asegúrate de tener una imagen disponible en la misma carpeta que tu archivo HTML.
 // En este caso, la imagen se llama 'banana.png'.
