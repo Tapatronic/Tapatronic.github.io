@@ -57,11 +57,6 @@
         border-style: solid;
         border-width: 3px;
     }
-    .banana {
-    position: absolute;
-    width: 50px;
-    transition: transform 1s;
-    }
     #gratis{
         color: green;
         font-weight: bold;
@@ -139,3 +134,15 @@
       50% { transform: scale(1.1); }
       100% { transform: scale(1); }
     }
+       .banana {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            transition: transform 10s;
+        }
+        .banana {
+            background-image: url('banana.png');
+        }
+        .banana1 {
+            background-image: url('banana.png');
+        }
