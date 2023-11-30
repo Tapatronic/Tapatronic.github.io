@@ -123,5 +123,34 @@
       </div>
     </div>
   </div>
+  <script>
+// Comprueba si ya hay una hora de conexión guardada
+var horaConexion = localStorage.getItem('horaConexion');
+if (!horaConexion) {
+    // Si no la hay, guarda la hora actual
+    horaConexion = new Date();
+    localStorage.setItem('horaConexion', horaConexion);
+} else {
+    // Si la hay, la convierte de nuevo a un objeto Date
+    horaConexion = new Date(horaConexion);
+}
+
+// Muestra la hora de conexión en el footer
+document.getElementById('horaConexion').textContent = 'Hora de conexión: ' + horaConexion.toLocaleTimeString();
+
+// Actualiza el tiempo de conexión cada segundo
+setInterval(function() {
+    var ahora = new Date();
+    var tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
+    document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
+}, 1000);
+
+// Elimina la hora de conexión cuando el usuario está a punto de salir de la página
+window.onbeforeunload = function() {
+    localStorage.removeItem('horaConexion');
+};
+
+    
+  </script>
 </body>
 </html>
