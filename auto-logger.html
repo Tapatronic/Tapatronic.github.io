@@ -145,12 +145,6 @@ setInterval(function() {
     document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
 }, 1000);
 
-// Elimina la hora de conexión cuando el usuario está a punto de salir de la página
-window.onbeforeunload = function() {
-    localStorage.removeItem('horaConexion');
-};
-
-    
   </script>
 </body>
 </html>
