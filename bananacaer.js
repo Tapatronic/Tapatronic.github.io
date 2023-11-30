@@ -4,7 +4,7 @@
             banana.style.top = event.clientY + 'px';
             setTimeout(function() {
                 banana.style.transform = 'translateY(' + window.innerHeight + 'px)';
-                banana.classList.remove('banana1');
-                banana.classList.add('banana2');
+                banana.classList.remove('banana');
+                banana.classList.add('banana1');
             }, 0);
         });
