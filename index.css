@@ -52,7 +52,7 @@
       list-style-type: none;
     }
     .search-place{
-        color: #0769c;
+        color: #6b6e6b;
         border-color: black;
         border-style: solid;
         border-width: 3px;
@@ -60,7 +60,7 @@
     #gratis{
         color: green;
         font-weight: bold;
-        text-size: 26px;
+        font-size: 26px;
     }
     .search-button{
         background-color: gray;
@@ -113,6 +113,7 @@
       margin-bottom: 300px;
     }
     footer {
+      border: 6px solid #1a1b1a;
       display: flex;
       justify-content: space-between;
       flex-direction: row;
@@ -121,7 +122,7 @@
       bottom: 0;
       width: 100%;
       padding: 10px 0;
-      background-color: #000;
+      background-color: #1b1f1c;
       color: #fff;
     }
      #horaConexion, #tiempoConexion {

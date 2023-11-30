@@ -124,6 +124,7 @@
       margin-bottom: 300px;
     }
     footer {
+      border: 6px solid #1a1b1a;
       display: flex;
       justify-content: space-between;
       flex-direction: row;
@@ -132,7 +133,7 @@
       bottom: 0;
       width: 100%;
       padding: 10px 0;
-      background-color: #000;
+      background-color: #1b1f1c;
       color: #fff;
     }
      #horaConexion, #tiempoConexion {
@@ -186,7 +187,7 @@
 
   <footer>
     <p id="horaConexion"></p>
-    <p>© 2023 TapaTronic. Todos los derechos reservados.</p>
+    <p id="footer">© 2023 TapaTronic. Todos los derechos reservados.</p>
     <p id="tiempoConexion"></p>
   </footer>
       <script>
@@ -202,6 +203,56 @@
             var tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
             document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
         }, 1000);
+
+       // Asegúrate de tener una imagen disponible en la misma carpeta que tu archivo HTML.
+// En este caso, la imagen se llama 'banana.png'.
+var imagenUrl = 'banana.png';
+
+// Escucha el evento de clic en el documento
+document.addEventListener('click', function(event) {
+  // Crea una nueva imagen
+  var imagen = new Image();
+  imagen.src = imagenUrl;
+  
+  // Ajusta el tamaño de la imagen a 100x100 píxeles
+  imagen.style.width = '50px';
+  imagen.style.height = '50px';
+  
+  // Posiciona la imagen en el lugar del clic
+  imagen.style.position = 'absolute'; 
+  imagen.style.left = (event.clientX - 50) + 'px'; // Restamos 50 para que el clic sea el centro de la imagen
+  imagen.style.top = (event.clientY - 50) + 'px'; 
+  
+  // Añade la imagen al cuerpo del documento
+  document.body.appendChild(imagen);
+  
+  // Haz que la imagen caiga
+  var velocidad = 2;
+  var intervalo = setInterval(function() {
+    var posicionActual = parseInt(imagen.style.top);
+    var posicionVentana = document.body.scrollHeight - document.getElementById('footer').offsetHeight; // Restamos la altura del footer
+    
+    // Si la imagen ha llegado al final de la página, deja de moverla
+    if (posicionActual + 100 >= posicionVentana) {
+      clearInterval(intervalo);
+      clearInterval(intervaloRotacion); // Detiene la rotación cuando la imagen se queda quieta
+    } else {
+      imagen.style.top = posicionActual + velocidad + 'px';
+    }
+  }, 20);
+
+  // Haz que la imagen gire 360 grados
+  var grados = 0;
+  var intervaloRotacion = setInterval(function() {
+    if (grados >= 1000) {
+      clearInterval(intervaloRotacion);
+    } else {
+      grados += 1;
+      imagen.style.transform = 'rotate(' + grados + 'deg)';
+    }
+  }, 20);
+});
+
     </script>
 </body>
 </html>
