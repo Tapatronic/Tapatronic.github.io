@@ -75,8 +75,7 @@
     <p id="tiempoConexion"></p>
   </footer>
       <script>
-        // Guarda la hora a la que el usuario se conectó
-// Comprueba si ya hay una hora de conexión guardada
+// Guarda la hora a la que el usuario se conectó
 // Comprueba si ya hay una hora de conexión guardada
 var horaConexion = localStorage.getItem('horaConexion');
 if (!horaConexion) {
@@ -98,6 +97,10 @@ setInterval(function() {
     document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
 }, 1000);
 
+// Añade un evento beforeunload para borrar la hora de conexión cuando el usuario abandona la página
+window.addEventListener('beforeunload', function() {
+    localStorage.removeItem('horaConexion');
+});
         function buscarProducto() {
   // Obtén el valor del input de búsqueda
   var input = document.querySelector('.search-bar input');
