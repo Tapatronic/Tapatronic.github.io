@@ -132,8 +132,13 @@ setInterval(function() {
 }, 1000);
 
 // Añade un evento beforeunload para borrar la hora de conexión cuando el usuario abandona la página
-window.addEventListener('beforeunload', function() {
-    localStorage.removeItem('horaConexion');
+window.addEventListener('beforeunload', function(event) {
+    // Comprueba si el usuario está navegando a otra página dentro de "tapatronic.github.io"
+    var nuevaUrl = event.target.activeElement.href;
+    if (!nuevaUrl || !nuevaUrl.includes('tapatronic.github.io')) {
+        // Si el usuario se va a otro sitio, borra la hora de conexión
+        localStorage.removeItem('horaConexion');
+    }
 });
 
 </script>
