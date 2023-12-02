@@ -97,15 +97,25 @@ setInterval(function() {
     document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
 }, 1000);
 
+// Variable global que indica si el usuario se está yendo a otro sitio dentro de "tapatronic.github.io"
+var seVaATapatronic = false;
+
+// Añade manejadores de eventos click a todos los enlaces de tu página
+var enlaces = document.querySelectorAll('a');
+enlaces.forEach(function(enlace) {
+    enlace.addEventListener('click', function() {
+        seVaATapatronic = true;
+    });
+});
+
 // Añade un evento beforeunload para borrar la hora de conexión cuando el usuario abandona la página
-window.addEventListener('beforeunload', function(event) {
-    // Comprueba si el usuario está navegando a otra página dentro de "tapatronic.github.io"
-    var nuevaUrl = event.target.activeElement.href;
-    if (!nuevaUrl || !nuevaUrl.includes('tapatronic.github.io')) {
+window.addEventListener('beforeunload', function() {
+    if (!seVaATapatronic) {
         // Si el usuario se va a otro sitio, borra la hora de conexión
         localStorage.removeItem('horaConexion');
     }
 });
+
         function buscarProducto() {
   // Obtén el valor del input de búsqueda
   var input = document.querySelector('.search-bar input');
