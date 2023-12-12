@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+<link href="index.css" rel="stylesheet">
 <link rel="shortcut icon" href="icon.png">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,146 +10,7 @@
   <meta property="og:description" content="Página oficial de colas biónicas" />
   <meta property="og:image" content="https://raw.githubusercontent.com/Tapatronic/Tapatronic.github.io/main/LOGUITO%20MUY%20GUAPO.jpeg" />
   <meta property="og:url" content="https://tapatronic.github.io/" />
-  <style>
-    body {
-      cursor: url('cursor01.cur'), auto;
-      background-color: black;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 0px;
-      min-height: 100vh;
-      margin: 0;
-      position: relative;
-    }
-    header {
-      width: 100%;
-      text-align: center;
-      align-content: center;
-      background-color: #f8f3e8;
-      margin-bottom: 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1;
-    }
-    .amazon-logo img {
-      width: 200px;
-      height: 200px;
-      animation: logo-animation 2s infinite;
-    }
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-    }
-     .botones {
-      background: none;
-      border: none;
-      width: 300px;
-      height:30px;
-      font-size: 17px;
-      color: #0769cb;
-    }
-    .botones:hover{
-        background: #c2bfb8;
-        color: #16261a;
-        text-decoration: underline;
-        cursor: url('cursor02.cur'), auto;
-    }
-    nav ul {
-      display: flex;
-      text-align: center;
-      justify-content: center;
-      list-style-type: none;
-    }
-    .search-bar {
-      margin-top: 20px;
-      border-bottom: none;
-      margin-bottom: 10px;
-    }
-    .products {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 100px;
-      width: 600px;
-      margin-top: 20px;
-    }  
-     .product p {
-       font-size: 20px;
-    }
-     .product h1 {
-       font-size: 30px;
-       font-family: Monospace;
-       color: #0769cb;
-       text-decoration: underline;
-     }
-      .product h1:hover{
-        color: red;
-        text-transform: uppercase; 
-    }
-    
-     .product {
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: center;
-      border: 1px solid #e0e0e0;
-      background-color: #2f2b29;
-      padding: 20px;
-      box-sizing: border-box;
-      margin-bottom: 20px;
-    }
-
-
-    a {
-      color: #0769cb; /* Cambia el color del texto del enlace a rojo */
-      text-decoration: none; /* Elimina la subrayado del enlace */
-    }
-    a:hover {
-      color: #00ff00; /* Cambia el color del texto del enlace a verde cuando el ratón pasa por encima */
-      cursor: url('cursor02.cur'), auto;
-    }
-    table {
-      width: 50%;
-    }
-    table, th, td {
-      border: 1px solid white;
-      border-collapse: collapse;
-      padding: 10px;
-      text-align: center;
-    }
-    section {
-      margin-bottom: 300px;
-    }
-    footer {
-      border: 6px solid #1a1b1a;
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      text-align: center;
-      position: sticky;
-      bottom: 0;
-      width: 100%;
-      padding: 10px 0;
-      background-color: #1b1f1c;
-      color: #fff;
-    }
-     #horaConexion, #tiempoConexion {
-       margin-left: 20px;
-       margin-right: 20px;
-       text-decoration: underline;
-        }
-    @keyframes logo-animation {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-  </style>
-  <title>TapaTronic Blog!</title>
+  <title>Bienvenido a TapaTronic</title>
 </head>
   
 <!-- Google tag (gtag.js) -->
@@ -163,24 +26,57 @@
 <body>
   <header>
     <div class="amazon-logo">
-     <a href="index.html"><img src="LOGUITO MUY GUAPO.jpeg" alt="Tapatronic Logo"></a>
+      <a href="index.html"><img src="LOGUITO MUY GUAPO.jpeg" alt="Tapatronic Logo"></a>
     </div>
     <nav>
       <ul>
-          <li><a href="https://tapatronic.github.io/index2.html"><button class="botones">Inicio</button></a></li>
+          <li><a href="https://tapatronic.github.io/index.html"><button class="botones">Inicio</button></a></li>
           <li><a href="https://tapatronic.github.io/blog.html"><button class="botones">Blog</button></a></li>
           <li><a href="https://tapatronic.github.io/nosotros.html"><button class="botones">Sobre nosotros</button></a></li>
           <li><a href="https://ma5yt02m8p6.typeform.com/to/TLjB2fz2" target="_blank" ><button class="botones">Formulario</button></a></li>
       </ul>
     </nav>
+    <div class="search-bar">
+      <form onsubmit="event.preventDefault(); buscarProducto();">
+        <input type="text" class="search-place" placeholder="Autologger...">
+        <button type="submit" class="search-button">¡Buscar!</button>
+      </form>
     </div> 
   </header>
 
   <section class="products">
-    
-
+    <div class="product">
+        <div class="product-title">
+        <a href="https://tapatronic.github.io/auto-logger.html"><h1>Auto Logger</h1></a>
+        <p>Lo importante es el tiempo, y lo sabes asi que no lo pierdas en tonterias.</p>
+        <p>0,50€</p>
+        </div>
+      </div>
+    <div class="product">
+      <div class="product-title">
+        <a href="https://tapatronic.github.io/class-tools.html"><h1>Class Tools</h1></a>
+      </div>
+      <p>Tus herramientas favoritas a la distancia de un click.</p>
+      <p>0,50€</p>
+    </div>
+    <div class="product">
+      <div class="product-title">
+        <a href="https://tapatronic.github.io/draw.html"><h1>Draw</h1></a>
+      </div>
+      <p>¿Te aburres? Pues atrévete con este reto de dibujo.</p>
+      <p>¡¡Con jugosos premios!!</p>
+      <p id="gratis">¡Gratis!</p>
+    </div>
+    <div class="product">
+      <div class="product-title">
+        <a href="https://tapatronic.github.io/recursos.html"><h1>Recursos</h1></a>
+      </div>
+      <p>Todo tipo de archivos que puedan tener utilidad.</p>
+      <p>El conicimiento es para todos, no lo olviden.</p>
+      <p id="gratis">¡Gratis!</p>
+    </div>
   </section>
-  </body>
+
   <footer>
     <p id="horaConexion"></p>
     <p id="footer">© 2023 TapaTronic. Todos los derechos reservados.</p>
@@ -228,8 +124,28 @@ window.addEventListener('beforeunload', function() {
     }
 });
 
+        function buscarProducto() {
+  // Obtén el valor del input de búsqueda
+  var input = document.querySelector('.search-bar input');
+  var filter = input.value.toUpperCase();
 
-       // Asegúrate de tener una imagen disponible en la misma carpeta que tu archivo HTML.
+  // Obtén todos los productos
+  var products = document.querySelectorAll('.product');
+
+  // Recorre todos los productos y oculta aquellos que no coinciden con la búsqueda
+  for (var i = 0; i < products.length; i++) {
+    var titleElement = products[i].querySelector('.product-title a');
+    if (titleElement) {
+      var title = titleElement.textContent;
+      if (title.toUpperCase().indexOf(filter) > -1) {
+        products[i].style.display = "";
+      } else {
+        products[i].style.display = "none";
+      }
+    }
+  }
+}            
+// Asegúrate de tener una imagen disponible en la misma carpeta que tu archivo HTML.
 // En este caso, la imagen se llama 'banana.png'.
 var imagenUrl = 'banana.png';
 
@@ -279,4 +195,5 @@ document.addEventListener('click', function(event) {
 });
 
     </script>
+</body>
 </html>
