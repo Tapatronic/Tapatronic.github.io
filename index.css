@@ -45,8 +45,8 @@
     }
     .sticker {
         position: absolute;
-        top: 15px; /* Ajusta según sea necesario */
-        right: 15px; /* Ajusta según sea necesario */
+        top: 20px; /* Ajusta según sea necesario */
+        right: 30px; /* Ajusta según sea necesario */
         background-color: green;
         padding: 5px;
         transform: rotate(20deg); /* Ajusta el ángulo según sea necesario */
