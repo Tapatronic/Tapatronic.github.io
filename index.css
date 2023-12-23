@@ -40,6 +40,18 @@
         text-decoration: underline;
         cursor: url('cursor02.cur'), auto;
     }
+    .draw-box {
+        position: relative;
+    }
+    .sticker {
+        position: absolute;
+        top: 10px; /* Ajusta según sea necesario */
+        right: 10px; /* Ajusta según sea necesario */
+        background-color: yellow;
+        padding: 5px;
+        transform: rotate(20deg); /* Ajusta el ángulo según sea necesario */
+    }
+
     .amazon-logo img {
       width: 200px;
       height: 200px;
