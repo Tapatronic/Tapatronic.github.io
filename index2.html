@@ -86,8 +86,15 @@
     <p id="tiempoConexion"></p>
   </footer>
       <script>
-// Guarda la hora a la que el usuario se conectó
-// Comprueba si ya hay una hora de conexión guardada
+// Función para detectar si el usuario está en un dispositivo móvil
+function esMovil() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// Si el usuario no está en un dispositivo móvil, ejecuta el código
+if (!esMovil()) {
+    // Aquí va tu código
+
 var horaConexion = localStorage.getItem('horaConexion');
 if (!horaConexion) {
     // Si no la hay, guarda la hora actual
@@ -170,7 +177,7 @@ document.addEventListener('click', function(event) {
     }
   }, 20);
 });
-
+}
     </script>
 </body>
 </html>
