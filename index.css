@@ -125,18 +125,19 @@
       margin-bottom: 300px;
     }
     footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
       border: 6px solid #1a1b1a;
       display: flex;
       justify-content: space-between;
       flex-direction: row;
       text-align: center;
-      position: sticky;
-      bottom: 0;
-      width: 100%;
       padding: 10px 0;
       background-color: #1b1f1c;
       color: #fff;
-    }
+  }
+  
      #horaConexion, #tiempoConexion {
        margin-left: 20px;
        margin-right: 20px;
