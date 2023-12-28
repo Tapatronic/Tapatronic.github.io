@@ -110,16 +110,12 @@ setInterval(function() {
 
 // Variable global que indica si el usuario se está yendo a otro sitio dentro de "tapatronic.github.io"
 var seVaATapatronic = false;
-
-// Añade manejadores de eventos click a todos los enlaces de tu página
 var enlaces = document.querySelectorAll('a');
 enlaces.forEach(function(enlace) {
     enlace.addEventListener('click', function() {
         seVaATapatronic = true;
     });
 });
-
-// Añade un evento beforeunload para borrar la hora de conexión cuando el usuario abandona la página
 window.addEventListener('beforeunload', function() {
     if (!seVaATapatronic) {
         // Si el usuario se va a otro sitio, borra la hora de conexión
@@ -128,14 +124,9 @@ window.addEventListener('beforeunload', function() {
 });
 
         function buscarProducto() {
-  // Obtén el valor del input de búsqueda
   var input = document.querySelector('.search-bar input');
   var filter = input.value.toUpperCase();
-
-  // Obtén todos los productos
   var products = document.querySelectorAll('.product');
-
-  // Recorre todos los productos y oculta aquellos que no coinciden con la búsqueda
   for (var i = 0; i < products.length; i++) {
     var titleElement = products[i].querySelector('.product-title a');
     if (titleElement) {
@@ -148,44 +139,27 @@ window.addEventListener('beforeunload', function() {
     }
   }
 }            
-// Asegúrate de tener una imagen disponible en la misma carpeta que tu archivo HTML.
-// En este caso, la imagen se llama 'banana.png'.
 var imagenUrl = 'banana.png';
-
-// Escucha el evento de clic en el documento
 document.addEventListener('click', function(event) {
-  // Crea una nueva imagen
   var imagen = new Image();
   imagen.src = imagenUrl;
-  
-  // Ajusta el tamaño de la imagen a 100x100 píxeles
   imagen.style.width = '50px';
   imagen.style.height = '50px';
-  
-  // Posiciona la imagen en el lugar del clic
   imagen.style.position = 'absolute'; 
-  imagen.style.left = (event.clientX - 50) + 'px'; // Restamos 50 para que el clic sea el centro de la imagen
+  imagen.style.left = (event.clientX - 50) + 'px';
   imagen.style.top = (event.clientY - 50) + 'px'; 
-  
-  // Añade la imagen al cuerpo del documento
   document.body.appendChild(imagen);
-  
-  // Haz que la imagen caiga
   var velocidad = 2;
   var intervalo = setInterval(function() {
     var posicionActual = parseInt(imagen.style.top);
-    var posicionVentana = document.body.scrollHeight - document.getElementById('footer').offsetHeight; // Restamos la altura del footer
-    
-    // Si la imagen ha llegado al final de la página, deja de moverla
+    var posicionVentana = document.body.scrollHeight - document.getElementById('footer').offsetHeight; // Restamos la altura del footer   
     if (posicionActual + 100 >= posicionVentana) {
       clearInterval(intervalo);
-      clearInterval(intervaloRotacion); // Detiene la rotación cuando la imagen se queda quieta
+      clearInterval(intervaloRotacion);
     } else {
       imagen.style.top = posicionActual + velocidad + 'px';
     }
   }, 20);
-
-  // Haz que la imagen gire 360 grados
   var grados = 0;
   var intervaloRotacion = setInterval(function() {
     if (grados >= 1000) {
