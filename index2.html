@@ -85,7 +85,8 @@
     <p id="footer">© 2023 TapaTronic. Todos los derechos reservados.</p>
     <p id="tiempoConexion"></p>
   </footer>
-      <script>
+   <script>
+
 $('.translation-links').click(function() {
   var lang = $(this).data('lang');
   var $frame = $('.goog-te-menu-frame:first');
@@ -95,8 +96,7 @@ $('.translation-links').click(function() {
   }
   $frame.contents().find('.goog-te-menu2-item span.text:contains('+lang+')').get(0).click();
   return false;
-});
-
+})
 
 // Función para detectar si el usuario está en un dispositivo móvil
 function esMovil() {
