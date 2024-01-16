@@ -82,6 +82,10 @@
         border-width: 3px;
         border-color: black;
     }
+    .translator{
+        margin-top: 2px;
+        margin-right: 2px;
+    }
     .search-bar {
       margin-top: 0px;
       border-bottom: none;

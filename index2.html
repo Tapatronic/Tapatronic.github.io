@@ -24,6 +24,17 @@
 
 <body>
   <header>
+    <div class="translator">
+      <div id="google_translate_element" class="google"></div>
+
+      <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'ca,eu,gl,en,fr,it,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
+              }
+      </script>
+      
+      <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
     <div class="amazon-logo">
       <a href="index.html"><img src="LOGUITO MUY GUAPO.jpeg" alt="Tapatronic Logo"></a>
     </div>
@@ -80,15 +91,6 @@
   </section>
 
   <footer>
-    <div id="google_translate_element" class="google"></div>
-
-<script type="text/javascript">
-function googleTranslateElementInit() {
-	new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'ca,eu,gl,en,fr,it,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
-        }
-</script>
-
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <p id="horaConexion"></p>
     <p id="footer">© 2023 TapaTronic. Todos los derechos reservados.</p>
     <p id="tiempoConexion"></p>
