@@ -79,12 +79,21 @@
       border: none;
       margin-top: 20px;
     }
+    .os-info {
+      display: flex;
+      justify-content: space-between;
+    }
+    .linux-info, .windows-info {
+      width: 45%;
+    }
     .creator-info {
       padding: 20px;
       background-color: #000; /* Cambiado a negro */
       color: #f4f4f4;
       width: 30%;
       margin-top: -20px; /* Añadido para mover la información del creador hacia arriba */
+      display: flex;
+      flex-direction: column;
     }
     .creator-info h2 {
       text-align: center;
@@ -131,11 +140,19 @@
       <div class="creator-info">
         <h2>Información adicional</h2>
         <h1>Creador: Santiago</h1>
-        <h1>Tamaño: 3.8KB</h1>
-        <h1>Tamaño descomprimido: 8,6KB</h1>
+        <div class="os-info">
+          <div class="linux-info">
+            <h3>Linux:</h3>
+            <p>Tamaño comprimido: 1.44KB</p>
+            <p>Tamaño descomprimido: 8,6KB</p>
+          </div>
+          <div class="windows-info">
+            <h1>Tamaño comprimido: 1.68KB</h1>
+            <h1>Tamaño descomprimido: 8,6KB</h1>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
   <script>
 // Guarda la hora a la que el usuario se conectó
 // Comprueba si ya hay una hora de conexión guardada
