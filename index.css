@@ -147,3 +147,15 @@
       50% { transform: scale(1.1); }
       100% { transform: scale(1); }
     }
+    /* Esto cambiará el color de fondo del widget a azul */
+    #google_translate_element {
+      background-color: #f8f3e8;
+    }
+    /* Esto cambiará el color del texto a blanco */
+    .goog-te-combo {
+      color: black;
+      font-family: monospace;
+    }
+    .goog-te-gadget-icon {
+      display: none !important;
+    }
