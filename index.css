@@ -155,12 +155,12 @@
     }
     /* Esto cambiará el color de fondo del widget a azul */
     #google_translate_element {
-      background-color: #f8f3e8;
+      background-color: #f8f3e8 !important;
     }
     /* Esto cambiará el color del texto a blanco */
     .goog-te-combo {
-      color: black;
-      font-family: monospace;
+      color: black !important;
+      font-family: monospace !important;
     }
     .goog-te-gadget-icon {
       display: none !important;
