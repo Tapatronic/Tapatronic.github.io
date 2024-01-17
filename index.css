@@ -82,12 +82,6 @@
         border-width: 3px;
         border-color: black;
     }
-    .translator{
-      position: absolute;
-        top: 0;
-        right: 0;
-    }
-    
     .search-bar {
       margin-top: 0px;
       border-bottom: none;
@@ -157,8 +151,13 @@
     span {
       background-color: #f8f3e8 !important;
       font-family: monospace;
-      border-block: black solid 2px;
     }
     .goog-te-gadget-icon {
       display: none !important;
     }
+    .translator{
+      position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
