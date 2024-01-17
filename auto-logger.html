@@ -1,203 +1,202 @@
 <!DOCTYPE html>
 <html lang="es">
 <link rel="shortcut icon" href="icon.png">
-<head>
-  <meta charset="UTF-8">
-  <meta property="og:title" content="TapaTronic" />
-  <meta property="og:description" content="Página oficial de colas biónicas" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/Tapatronic/Tapatronic.github.io/main/LOGUITO%20MUY%20GUAPO.jpeg" />
-  <meta property="og:url" content="https://tapatronic.github.io/" />
-  <title>Detalles del producto - Auto Logger</title>
-  <style>
-    body {
-      cursor: url('cursor01.cur'), auto;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start; /* Cambiado para que el contenido esté en la parte superior */
-      height: 100vh;
-      background-color: #000; /* Cambiado a negro */
-      color: #f4f4f4;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start; /* Cambiado para que el contenido esté en la parte superior */
-      width: 80%;
-      height: 80vh;
-    }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      padding: 20px;
-      background-color: #000; /* Cambiado a negro */
-      border-bottom: 1px solid #fff; /* Añadido para crear una línea blanca debajo del encabezado */
-    }
-    .header img {
-      width: 50px;
-      height: 50px;
-    }
-    .header button {
-      background-color: #5C9210;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-    }
-    .content {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding: 20px;
-      background-color: #000;
-    }
-    .product-detail {
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
-      padding: 20px;
-      background-color: #000;
-      width: 60%;
-    }
-    .product-detail h1 {
-      text-align: left;
-    }
-    .product-detail p {
-      color: #ccc;
-    }
-    .product-detail .price {
-      font-size: 1.5em;
-      color: #5C9210;
-    }
-    .product-detail button {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      background-color: #5C9210;
-      color: #fff;
-      border: none;
-      margin-top: 20px;
-    }
-    .os-info {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-    }
-    .linux-info, .windows-info {
-      width: 45%;
-      text-align: left;
-    }
-    .creator-info {
-      padding: 20px;
-      background-color: #000;
-      color: #f4f4f4;
-      width: 30%;
-      margin-top: -20px;
-      display: flex;
-      flex-direction: column;
-    }
-    .creator-info h2 {
-      text-align: left;
-    }
-    .creator-info p {
-      color: #ccc;
-    }
-    a {
-      color: #0769cb;
-      text-decoration: none;
-    }
-    a:hover {
-      color: #00ff00;
-      cursor: url('cursor02.cur'), auto;
-    }
-  </style>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YLPM6N3D6J"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="TapaTronic" />
+    <meta property="og:description" content="Página oficial de colas biónicas" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Tapatronic/Tapatronic.github.io/main/LOGUITO%20MUY%20GUAPO.jpeg" />
+    <meta property="og:url" content="https://tapatronic.github.io/" />
+    <title>Detalles del producto - Auto Logger</title>
+    <style>
+      body {
+        cursor: url('cursor01.cur'), auto;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        background-color: #000;
+        color: #f4f4f4;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 80%;
+        height: 80vh;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        background-color: #000;
+        border-bottom: 1px solid #fff; /* Añadido para crear una línea blanca debajo del encabezado */
+      }
+      .header img {
+        width: 50px;
+        height: 50px;
+      }
+      .header button {
+        background-color: #5C9210;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+      }
+      .content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px;
+        background-color: #000;
+      }
+      .product-detail {
+        box-shadow: 0 0 10px rgba(255,255,255,0.1);
+        padding: 20px;
+        background-color: #000;
+        width: 60%;
+      }
+      .product-detail h1 {
+        text-align: left;
+      }
+      .product-detail p {
+        color: #ccc;
+      }
+      .product-detail .price {
+        font-size: 1.5em;
+        color: #5C9210;
+      }
+      .product-detail button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #5C9210;
+        color: #fff;
+        border: none;
+        margin-top: 20px;
+      }
+      .os-info {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+      .linux-info, .windows-info {
+        width: 45%;
+        text-align: left;
+        border-right-color: #f4f4f4 ridge;
+      }
+      .creator-info {
+        padding: 20px;
+        background-color: #000;
+        color: #f4f4f4;
+        width: 30%;
+        margin-top: -20px;
+        display: flex;
+        flex-direction: column;
+      }
+      .creator-info h2 {
+        text-align: left;
+      }
+      .creator-info p {
+        color: #ccc;
+      }
+      a {
+        color: #0769cb;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #00ff00;
+        cursor: url('cursor02.cur'), auto;
+      }
+    </style>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLPM6N3D6J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-YLPM6N3D6J');
-</script>
+    gtag('config', 'G-YLPM6N3D6J');
+  </script>
 
-<body>
-  <div class="container">
-    <div class="header">
-      <a href='index.html'><img src="LOGUITO ALT.jpeg" alt="Auto Logger"></a>
-      <button><a href='index.html'>Volver</a></button>
-    </div>
-    <div class="content">
-      <div class="product-detail">
-        <h1>Auto Logger</h1>
-        <p>Lo importante es el tiempo, y lo sabes asi que no lo pierdas en tonterias.</p>
-        <p>Un simple click y tienes el navegador abierto con el curso que te toca a esa hora, ¿No es maravilloso?, ademas totalmente personalizable.</p>
-        <p class="price"></p>
-        <button><a href='https://www.mediafire.com/file/j9g33goyj98a0ge/Linux_Autologger.zip/file' target="_blank">Para Linux</a></button>
-        <button><a href='https://www.mediafire.com/file/7zbxlsrxixuqtzg/Windows_Autologger.zip/file' target="_blank">Para Windows</a></button>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href='index.html'><img src="LOGUITO ALT.jpeg" alt="Auto Logger"></a>
+        <button><a href='index.html'>Volver</a></button>
       </div>
-      <div class="creator-info">
-        <h2>Información adicional</h2>
-        <h1>Creador: Santiago</h1>
-        <div class="os-info">
-          <div class="linux-info">
-            <h2>Linux:</h2>
-            <h4>Tamaño comprimido: 1.44KB</h4>
-            <h4>Tamaño descomprimido: 4.20KB</h4>
-          </div>
-          <div class="windows-info">
-            <h2>Windows:</h2>
-            <h4>Tamaño comprimido: 1.68KB</h4>
-            <h4>Tamaño descomprimido: 4.41KB</h4>
+      <div class="content">
+        <div class="product-detail">
+          <h1>Auto Logger</h1>
+          <p>Lo importante es el tiempo, y lo sabes asi que no lo pierdas en tonterias.</p>
+          <p>Un simple click y tienes el navegador abierto con el curso que te toca a esa hora, ¿No es maravilloso?, ademas totalmente personalizable.</p>
+          <p class="price"></p>
+          <button><a href='https://www.mediafire.com/file/j9g33goyj98a0ge/Linux_Autologger.zip/file' target="_blank">Para Linux</a></button>
+          <button><a href='https://www.mediafire.com/file/7zbxlsrxixuqtzg/Windows_Autologger.zip/file' target="_blank">Para Windows</a></button>
+        </div>
+        <div class="creator-info">
+          <h2>Información adicional</h2>
+          <h1>Creador: Santiago</h1>
+          <div class="os-info">
+            <div class="linux-info">
+              <h2>Linux:</h2>
+              <h4>Tamaño comprimido: 1.44KB</h4>
+              <h4>Tamaño descomprimido: 4.20KB</h4>
+            </div>
+            <div class="windows-info">
+              <h2>Windows:</h2>
+              <h4>Tamaño comprimido: 1.68KB</h4>
+              <h4>Tamaño descomprimido: 4.41KB</h4>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  <script>
-// Guarda la hora a la que el usuario se conectó
-// Comprueba si ya hay una hora de conexión guardada
-var horaConexion = localStorage.getItem('horaConexion');
-if (!horaConexion) {
-    // Si no la hay, guarda la hora actual
-    horaConexion = new Date();
-    localStorage.setItem('horaConexion', horaConexion);
-} else {
-    // Si la hay, la convierte de nuevo a un objeto Date
-    horaConexion = new Date(horaConexion);
-}
+    <script>
+  // Guarda la hora a la que el usuario se conectó
+  // Comprueba si ya hay una hora de conexión guardada
+  var horaConexion = localStorage.getItem('horaConexion');
+  if (!horaConexion) {
+      // Si no la hay, guarda la hora actual
+      horaConexion = new Date();
+      localStorage.setItem('horaConexion', horaConexion);
+  } else {
+      // Si la hay, la convierte de nuevo a un objeto Date
+      horaConexion = new Date(horaConexion);
+  }
 
-// Muestra la hora de conexión en el footer
-document.getElementById('horaConexion').textContent = 'Hora de conexión: ' + horaConexion.toLocaleTimeString();
+  // Muestra la hora de conexión en el footer
+  document.getElementById('horaConexion').textContent = 'Hora de conexión: ' + horaConexion.toLocaleTimeString();
 
-// Actualiza el tiempo de conexión cada segundo
-setInterval(function() {
-    var ahora = new Date();
-    var tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
-    document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
-}, 1000);
+  // Actualiza el tiempo de conexión cada segundo
+  setInterval(function() {
+      var ahora = new Date();
+      var tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
+      document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
+  }, 1000);
 
-// Variable global que indica si el usuario se está yendo a otro sitio dentro de "tapatronic.github.io"
-var seVaATapatronic = false;
+  // Variable global que indica si el usuario se está yendo a otro sitio dentro de "tapatronic.github.io"
+  var seVaATapatronic = false;
 
-// Añade manejadores de eventos click a todos los enlaces de tu página
-var enlaces = document.querySelectorAll('a');
-enlaces.forEach(function(enlace) {
-    enlace.addEventListener('click', function() {
-        seVaATapatronic = true;
-    });
-});
+  // Añade manejadores de eventos click a todos los enlaces de tu página
+  var enlaces = document.querySelectorAll('a');
+  enlaces.forEach(function(enlace) {
+      enlace.addEventListener('click', function() {
+          seVaATapatronic = true;
+      });
+  });
 
-// Añade un evento beforeunload para borrar la hora de conexión cuando el usuario abandona la página
-window.addEventListener('beforeunload', function() {
-    if (!seVaATapatronic) {
-        // Si el usuario se va a otro sitio, borra la hora de conexión
-        localStorage.removeItem('horaConexion');
-    }
-});
-
-
-  </script>
-</body>
+  // Añade un evento beforeunload para borrar la hora de conexión cuando el usuario abandona la página
+  window.addEventListener('beforeunload', function() {
+      if (!seVaATapatronic) {
+          // Si el usuario se va a otro sitio, borra la hora de conexión
+          localStorage.removeItem('horaConexion');
+      }
+  });
+    </script>
+  </body>
 </html>
