@@ -153,7 +153,11 @@
           var velocidad = 2;
           var intervalo = setInterval(function() {
             var posicionActual = parseInt(imagen.style.top);
-            var posicionVentana = window.innerHeight - document.getElementById('footer').offsetHeight;
+            var footer = document.getElementById('footer');
+            var estiloFooter = window.getComputedStyle(footer);
+            var margenFooter = parseInt(estiloFooter.marginTop) + parseInt(estiloFooter.marginBottom);
+            var rellenoFooter = parseInt(estiloFooter.paddingTop) + parseInt(estiloFooter.paddingBottom);
+            var posicionVentana = window.innerHeight - footer.offsetHeight - margenFooter - rellenoFooter;
             if (posicionActual + 100 >= posicionVentana) {
               clearInterval(intervalo);
               clearInterval(intervaloRotacion);
