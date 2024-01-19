@@ -134,54 +134,53 @@
             }
         });
 
-                function buscarProducto() {
-          var input = document.querySelector('.search-bar input');
-          var filter = input.value.toUpperCase();
-          var products = document.querySelectorAll('.product');
-          for (var i = 0; i < products.length; i++) {
-            var titleElement = products[i].querySelector('.product-title a');
-            if (titleElement) {
-              var title = titleElement.textContent;
-              if (title.toUpperCase().indexOf(filter) > -1) {
-                products[i].style.display = "";
-              } else {
-                products[i].style.display = "none";
+            function buscarProducto() {
+              var input = document.querySelector('.search-bar input');
+              var filter = input.value.toUpperCase();
+              var products = document.querySelectorAll('.product');
+              for (var i = 0; i < products.length; i++) {
+                var titleElement = products[i].querySelector('.product-title a');
+                if (titleElement) {
+                  var title = titleElement.textContent;
+                  if (title.toUpperCase().indexOf(filter) > -1) {
+                    products[i].style.display = "";
+                  } else {
+                    products[i].style.display = "none";
+                  }
+                }
               }
-            }
-          }
-        }            
-        var imagenUrl = 'banana.png';
-        document.addEventListener('click', function(event) {
-          var imagen = new Image();
-          imagen.src = imagenUrl;
-          imagen.style.width = '50px';
-          imagen.style.height = '50px';
-          imagen.style.position = 'absolute'; 
-          imagen.style.left = (event.clientX - 50) + 'px';
-          imagen.style.top = (event.clientY - 50) + 'px'; 
-          document.body.appendChild(imagen);
-          var velocidad = 2;
-          var intervalo = setInterval(function() {
-            var posicionActual = parseInt(imagen.style.top);
-            var posicionVentana = document.body.scrollHeight - document.getElementById('footer').offsetHeight; // Restamos la altura del footer   
-            if (posicionActual + 100 >= posicionVentana) {
-              clearInterval(intervalo);
-              clearInterval(intervaloRotacion);
-            } else {
-              imagen.style.top = posicionActual + velocidad + 'px';
-            }
-          }, 20);
-          var grados = 0;
-          var intervaloRotacion = setInterval(function() {
-            if (grados >= 1000) {
-              clearInterval(intervaloRotacion);
-            } else {
-              grados += 1;
-              imagen.style.transform = 'rotate(' + grados + 'deg)';
-            }
-          }, 20);
-        });
-        }
+            }            
+          var imagenUrl = 'banana.png';
+          document.addEventListener('click', function(event) {
+            var imagen = new Image();
+            imagen.src = imagenUrl;
+            imagen.style.width = '50px';
+            imagen.style.height = '50px';
+            imagen.style.position = 'fixed'; 
+            imagen.style.left = (event.clientX - 25) + 'px';
+            imagen.style.top = (event.clientY - 25) + 'px'; 
+            document.body.appendChild(imagen);
+            var velocidad = 2;
+            var intervalo = setInterval(function() {
+              var posicionActual = parseInt(imagen.style.top);
+              var posicionVentana = window.innerHeight - 50; // Restamos la altura de la imagen
+              if (posicionActual + 100 >= posicionVentana) {
+                clearInterval(intervalo);
+                clearInterval(intervaloRotacion);
+              } else {
+                imagen.style.top = posicionActual + velocidad + 'px';
+              }
+            }, 20);
+            var grados = 0;
+            var intervaloRotacion = setInterval(function() {
+              if (grados >= 1000) {
+                clearInterval(intervaloRotacion);
+              } else {
+                grados += 1;
+                imagen.style.transform = 'rotate(' + grados + 'deg)';
+              }
+            }, 20);
+          });
       </script>
   </body>
 </html>
