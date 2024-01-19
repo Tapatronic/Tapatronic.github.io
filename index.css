@@ -11,6 +11,9 @@
       margin: 0;
       position: relative;
     }
+    #contenido {
+      position: relative;
+    }    
     header {
       width: 100%;
       text-align: center;
