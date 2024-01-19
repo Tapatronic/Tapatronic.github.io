@@ -148,17 +148,17 @@
             imagen.style.height = '50px';
             imagen.style.position = 'fixed'; 
             imagen.style.left = (event.clientX - 25) + 'px';
-            imagen.style.top = (event.clientY - 25) + 'px'; 
+            imagen.style.bottom = '0px'; 
             document.body.appendChild(imagen);
             var velocidad = 2;
             var intervalo = setInterval(function() {
-              var posicionActual = parseInt(imagen.style.top);
+              var posicionActual = parseInt(imagen.style.bottom);
               var posicionVentana = window.innerHeight - 50;
               if (posicionActual + 100 >= posicionVentana) {
                 clearInterval(intervalo);
                 clearInterval(intervaloRotacion);
               } else {
-                imagen.style.top = posicionActual + velocidad + 'px';
+                imagen.style.bottom = posicionActual + velocidad + 'px';
               }
             }, 20);
             var grados = 0;
