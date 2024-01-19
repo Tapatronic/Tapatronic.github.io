@@ -90,41 +90,31 @@
       <p id="tiempoConexion"></p>
     </footer>
     <script>
-        // Función para detectar si el usuario está en un dispositivo móvil
-        function esMovil() {
-            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        }
-
-        // Si el usuario no está en un dispositivo móvil, ejecuta el código
-        if (!esMovil()) {
-            // Aquí va tu código
-
+      function esMovil() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      }
+      if (!esMovil()) {
         var horaConexion = localStorage.getItem('horaConexion');
         if (!horaConexion) {
-            // Si no la hay, guarda la hora actual
-            horaConexion = new Date();
-            localStorage.setItem('horaConexion', horaConexion);
+          horaConexion = new Date();
+          localStorage.setItem('horaConexion', horaConexion);
         } else {
-            // Si la hay, la convierte de nuevo a un objeto Date
-            horaConexion = new Date(horaConexion);
+          horaConexion = new Date(horaConexion);
         }
-
         // Muestra la hora de conexión en el footer
         document.getElementById('horaConexion').textContent = 'Hora de conexión: ' + horaConexion.toLocaleTimeString();
-
         // Actualiza el tiempo de conexión cada segundo
         setInterval(function() {
-            var ahora = new Date();
-            var tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
-            document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
+          var ahora = new Date();
+          var tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
+          document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
         }, 1000);
-
         // Variable global que indica si el usuario se está yendo a otro sitio dentro de "tapatronic.github.io"
         var seVaATapatronic = false;
         var enlaces = document.querySelectorAll('a');
         enlaces.forEach(function(enlace) {
             enlace.addEventListener('click', function() {
-                seVaATapatronic = true;
+              seVaATapatronic = true;
             });
         });
         window.addEventListener('beforeunload', function() {
@@ -134,24 +124,24 @@
             }
         });
 
-            function buscarProducto() {
-              var input = document.querySelector('.search-bar input');
-              var filter = input.value.toUpperCase();
-              var products = document.querySelectorAll('.product');
-              for (var i = 0; i < products.length; i++) {
-                var titleElement = products[i].querySelector('.product-title a');
-                if (titleElement) {
-                  var title = titleElement.textContent;
-                  if (title.toUpperCase().indexOf(filter) > -1) {
-                    products[i].style.display = "";
-                  } else {
-                    products[i].style.display = "none";
-                  }
-                }
+        function buscarProducto() {
+          var input = document.querySelector('.search-bar input');
+          var filter = input.value.toUpperCase();
+          var products = document.querySelectorAll('.product');
+          for (var i = 0; i < products.length; i++) {
+            var titleElement = products[i].querySelector('.product-title a');
+            if (titleElement) {
+              var title = titleElement.textContent;
+              if (title.toUpperCase().indexOf(filter) > -1) {
+                products[i].style.display = "";
+              } else {
+                products[i].style.display = "none";
               }
-            }            
-          var imagenUrl = 'banana.png';
-          document.addEventListener('click', function(event) {
+            }
+          }
+        }            
+        var imagenUrl = 'banana.png';
+        document.addEventListener('click', function(event) {
             var imagen = new Image();
             imagen.src = imagenUrl;
             imagen.style.width = '50px';
@@ -163,7 +153,7 @@
             var velocidad = 2;
             var intervalo = setInterval(function() {
               var posicionActual = parseInt(imagen.style.top);
-              var posicionVentana = window.innerHeight - 50; // Restamos la altura de la imagen
+              var posicionVentana = window.innerHeight - 50;
               if (posicionActual + 100 >= posicionVentana) {
                 clearInterval(intervalo);
                 clearInterval(intervaloRotacion);
@@ -180,7 +170,8 @@
                 imagen.style.transform = 'rotate(' + grados + 'deg)';
               }
             }, 20);
-          });
-      </script>
+        });
+      }
+    </script>
   </body>
 </html>
