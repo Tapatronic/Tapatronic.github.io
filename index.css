@@ -11,9 +11,6 @@
       margin: 0;
       position: relative;
     }
-    #contenido {
-      position: relative;
-    }    
     header {
       width: 100%;
       text-align: center;
@@ -148,7 +145,6 @@
       50% { transform: scale(1.1); }
       100% { transform: scale(1); }
     }
-    /* Esto cambiará el color de fondo del widget a azul */
     span {
       background-color: #f8f3e8 !important;
       font-family: monospace;
