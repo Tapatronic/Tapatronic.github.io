@@ -86,7 +86,7 @@
     </section>
     <footer>
       <p id="horaConexion"></p>
-      <p id="footer">© 2023 TapaTronic. Todos los derechos reservados.</p>
+      <p id="zonaEspecifica">© 2023 TapaTronic. Todos los derechos reservados.</p>
       <p id="tiempoConexion"></p>
     </footer>
     <script>
@@ -153,7 +153,8 @@
           var velocidad = 2;
           var intervalo = setInterval(function() {
             var posicionActual = parseInt(imagen.style.top);
-            var posicionVentana = document.body.scrollHeight - document.getElementById('footer').offsetHeight;
+            var zonaEspecifica = document.getElementById('zonaEspecifica');
+            var posicionVentana = zonaEspecifica.offsetTop + zonaEspecifica.offsetHeight;
             if (posicionActual + 100 >= posicionVentana) {
               clearInterval(intervalo);
               clearInterval(intervaloRotacion);
