@@ -148,7 +148,7 @@
           imagen.style.height = '50px';
           imagen.style.position = 'absolute'; 
           imagen.style.left = (event.clientX - 25) + 'px';
-          imagen.style.top = (event.clientY - 25) + 'px'; 
+          imagen.style.top = (event.pageY - 25) + 'px'; 
           document.body.appendChild(imagen);
           var velocidad = 2;
           var intervalo = setInterval(function() {
