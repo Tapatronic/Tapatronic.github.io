@@ -114,6 +114,14 @@
         color: #00ff00;
         cursor: url('cursor02.cur'), auto;
       }
+      .botones {
+        background: none;
+        border: none;
+        width: 300px;
+        height:30px;
+        font-size: 17px;
+        color: #0769cb;
+      }
     </style>
   </head>
   <!-- Google tag (gtag.js) -->
@@ -128,7 +136,9 @@
     <div class="container">
       <div class="header">
         <a href='index.html'><img src="LOGUITO ALT.jpeg" alt="Auto Logger"></a>
-        <button><a href='index.html'>Volver</a></button>
+        <ul>
+          <li><button class="botones"><a href='index.html'>Volver</a></button></li>
+        </ul>
       </div>
       <div class="content">
         <div class="product-detail">
@@ -157,46 +167,46 @@
         </div>
       </div>
     <script>
-  // Guarda la hora a la que el usuario se conectó
-  // Comprueba si ya hay una hora de conexión guardada
-  var horaConexion = localStorage.getItem('horaConexion');
-  if (!horaConexion) {
-      // Si no la hay, guarda la hora actual
-      horaConexion = new Date();
-      localStorage.setItem('horaConexion', horaConexion);
-  } else {
-      // Si la hay, la convierte de nuevo a un objeto Date
-      horaConexion = new Date(horaConexion);
-  }
-
-  // Muestra la hora de conexión en el footer
-  document.getElementById('horaConexion').textContent = 'Hora de conexión: ' + horaConexion.toLocaleTimeString();
-
-  // Actualiza el tiempo de conexión cada segundo
-  setInterval(function() {
-      var ahora = new Date();
-      var tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
-      document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
-  }, 1000);
-
-  // Variable global que indica si el usuario se está yendo a otro sitio dentro de "tapatronic.github.io"
-  var seVaATapatronic = false;
-
-  // Añade manejadores de eventos click a todos los enlaces de tu página
-  var enlaces = document.querySelectorAll('a');
-  enlaces.forEach(function(enlace) {
-      enlace.addEventListener('click', function() {
-          seVaATapatronic = true;
-      });
-  });
-
-  // Añade un evento beforeunload para borrar la hora de conexión cuando el usuario abandona la página
-  window.addEventListener('beforeunload', function() {
-      if (!seVaATapatronic) {
-          // Si el usuario se va a otro sitio, borra la hora de conexión
-          localStorage.removeItem('horaConexion');
+      // Guarda la hora a la que el usuario se conectó
+      // Comprueba si ya hay una hora de conexión guardada
+      var horaConexion = localStorage.getItem('horaConexion');
+      if (!horaConexion) {
+          // Si no la hay, guarda la hora actual
+          horaConexion = new Date();
+          localStorage.setItem('horaConexion', horaConexion);
+      } else {
+          // Si la hay, la convierte de nuevo a un objeto Date
+          horaConexion = new Date(horaConexion);
       }
-  });
+
+      // Muestra la hora de conexión en el footer
+      document.getElementById('horaConexion').textContent = 'Hora de conexión: ' + horaConexion.toLocaleTimeString();
+
+      // Actualiza el tiempo de conexión cada segundo
+      setInterval(function() {
+          var ahora = new Date();
+          var tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
+          document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
+      }, 1000);
+
+      // Variable global que indica si el usuario se está yendo a otro sitio dentro de "tapatronic.github.io"
+      var seVaATapatronic = false;
+
+      // Añade manejadores de eventos click a todos los enlaces de tu página
+      var enlaces = document.querySelectorAll('a');
+      enlaces.forEach(function(enlace) {
+          enlace.addEventListener('click', function() {
+              seVaATapatronic = true;
+          });
+      });
+
+      // Añade un evento beforeunload para borrar la hora de conexión cuando el usuario abandona la página
+      window.addEventListener('beforeunload', function() {
+          if (!seVaATapatronic) {
+              // Si el usuario se va a otro sitio, borra la hora de conexión
+              localStorage.removeItem('horaConexion');
+          }
+      });
     </script>
   </body>
 </html>
