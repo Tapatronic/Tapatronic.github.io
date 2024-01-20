@@ -35,7 +35,7 @@
         width: 100%;
         padding: 20px;
         background-color: #000;
-        border-bottom: 1px solid #fff; /* Añadido para crear una línea blanca debajo del encabezado */
+        border-bottom: 1px solid #fff;
       }
       .header img {
         width: 50px;
@@ -115,12 +115,11 @@
         cursor: url('cursor02.cur'), auto;
       }
       .botones {
-        background: none;
-        border: none;
-        width: 300px;
-        height:30px;
-        font-size: 17px;
-        color: #0769cb;
+         display: inline-block;
+         padding: 10px 20px;
+         background-color: green;
+         color: white;
+         text-decoration: none;
       }
     </style>
   </head>
@@ -136,9 +135,7 @@
     <div class="container">
       <div class="header">
         <a href='index.html'><img src="LOGUITO ALT.jpeg" alt="Auto Logger"></a>
-        <ul>
-          <li><button class="botones"><a href='index.html'>Volver</a></button></li>
-        </ul>
+        <a href='index.html' class="botones">Volver</a>
       </div>
       <div class="content">
         <div class="product-detail">
