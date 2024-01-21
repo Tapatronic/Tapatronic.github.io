@@ -12,6 +12,10 @@
         body {
             background-color: darkslategray;
             text-align: center;
+            cursor: url('cursor01.cur'), auto;
+        }
+        a:hover {
+            cursor: url('cursor02.cur'), auto;
         }
         h1 {
             color: antiquewhite;
@@ -46,46 +50,43 @@
         </a>
     </body>
     <script>
-        // Guarda la hora a la que el usuario se conectó
-        // Comprueba si ya hay una hora de conexión guardada
-        var horaConexion = localStorage.getItem('horaConexion');
-        if (!horaConexion) {
-            // Si no la hay, guarda la hora actual
-            horaConexion = new Date();
-            localStorage.setItem('horaConexion', horaConexion);
-        } else {
-            // Si la hay, la convierte de nuevo a un objeto Date
-            horaConexion = new Date(horaConexion);
+      // Guarda la hora a la que el usuario se conectó
+      // Comprueba si ya hay una hora de conexión guardada
+      var horaConexion = localStorage.getItem('horaConexion');
+      if (!horaConexion) {
+        // Si no la hay, guarda la hora actual
+        horaConexion = new Date();
+        localStorage.setItem('horaConexion', horaConexion);
+      } else {
+        // Si la hay, la convierte de nuevo a un objeto Date
+         horaConexion = new Date(horaConexion);
+      }
+      // Muestra la hora de conexión en el footer
+      document.getElementById('horaConexion').textContent = 'Hora de conexión: ' + horaConexion.toLocaleTimeString();
+      // Actualiza el tiempo de conexión cada segundo
+      setInterval(function() {
+        var ahora = new Date();
+        var tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
+        document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
+      }, 1000);
+        
+      // Variable global que indica si el usuario se está yendo a otro sitio dentro de "tapatronic.github.io"
+      var seVaATapatronic = false;
+        
+      // Añade manejadores de eventos click a todos los enlaces de tu página
+      var enlaces = document.querySelectorAll('a');
+      enlaces.forEach(function(enlace) {
+        enlace.addEventListener('click', function() {
+          seVaATapatronic = true;
+        });
+      });
+        
+      // Añade un evento beforeunload para borrar la hora de conexión cuando el usuario abandona la página
+      window.addEventListener('beforeunload', function() {
+        if (!seVaATapatronic) {
+          // Si el usuario se va a otro sitio, borra la hora de conexión
+          localStorage.removeItem('horaConexion');
         }
-        
-        // Muestra la hora de conexión en el footer
-        document.getElementById('horaConexion').textContent = 'Hora de conexión: ' + horaConexion.toLocaleTimeString();
-        
-        // Actualiza el tiempo de conexión cada segundo
-        setInterval(function() {
-            var ahora = new Date();
-            var tiempoConexion = Math.floor((ahora - horaConexion) / 1000);
-            document.getElementById('tiempoConexion').textContent = 'Tiempo de conexión: ' + tiempoConexion + ' segundos';
-        }, 1000);
-        
-        // Variable global que indica si el usuario se está yendo a otro sitio dentro de "tapatronic.github.io"
-        var seVaATapatronic = false;
-        
-        // Añade manejadores de eventos click a todos los enlaces de tu página
-        var enlaces = document.querySelectorAll('a');
-        enlaces.forEach(function(enlace) {
-            enlace.addEventListener('click', function() {
-                seVaATapatronic = true;
-            });
-        });
-        
-        // Añade un evento beforeunload para borrar la hora de conexión cuando el usuario abandona la página
-        window.addEventListener('beforeunload', function() {
-            if (!seVaATapatronic) {
-                // Si el usuario se va a otro sitio, borra la hora de conexión
-                localStorage.removeItem('horaConexion');
-            }
-        });
-        
-    </script>        
+      }); 
+  </script>        
 </html>
