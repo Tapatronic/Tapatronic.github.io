@@ -81,10 +81,10 @@
     }
     .creator-info {
       padding: 20px;
-      background-color: #000; /* Cambiado a negro */
+      background-color: #000;
       color: #f4f4f4;
       width: 30%;
-      margin-top: -20px; /* Añadido para mover la información del creador hacia arriba */
+      margin-top: -20px;
     }
     .creator-info h2 {
       text-align: center;
@@ -93,12 +93,19 @@
       color: #ccc;
     }
    a {
-      color: #0769cb; /* Cambia el color del texto del enlace a rojo */
-      text-decoration: none; /* Elimina la subrayado del enlace */
+      color: #0769cb;
+      text-decoration: none;
     }
     a:hover {
-      color: #00ff00; /* Cambia el color del texto del enlace a verde cuando el ratón pasa por encima */
+      color: #00ff00;
       cursor: url('cursor02.cur'), auto;
+    }
+    .boton {
+         display: inline-block;
+         padding: 10px 20px;
+         background-color: green;
+         color: white;
+         text-decoration: none;
     }
   </style>
 </head>
@@ -117,7 +124,7 @@
   <div class="container">
     <div class="header">
       <a href='index.html'><img src="LOGUITO ALT.jpeg" alt="Auto Logger"></a>
-      <button><a href='index.html'>Volver</a></button>
+      <button><a href='index.html' class="boton">Volver</a></button>
     </div>
     <div class="content">
       <div class="product-detail">
